@@ -1,9 +1,3 @@
-provider "azurerm" {
-  # Whilst version is optional, we /strongly recommend/ using it to pin the ve$
-  version = "=2.5.0"
-  features {}
-}
-
 
 variable "client_secret" {
 }
@@ -17,3 +11,4 @@ provider "azurerm" {
   client_secret   = var.ARM_CLIENT_SECRET
   tenant_id       = var.ARM_TENANT_ID
 
+}
