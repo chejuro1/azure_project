@@ -18,3 +18,15 @@ resource "azurerm_resource_group" "myterraformgroup" {
         environment = "Terraform Demo"
     }
 }
+
+resource "azurerm_virtual_network" "myterraformnetwork" {
+    name                = "myVnet"
+    address_space       = var.address_space
+    location            = var.location
+    resource_group_name = azurerm_resource_group.myterraformgroup.name
+
+    tags = {
+        environment = "Terraform Demo"
+    }
+}
+
