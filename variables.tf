@@ -13,5 +13,10 @@ variable "tenant_id" {
     description = "tenant_id"
 }
 
+variable "address_space" {
+    description = "address_space"
+    default     = ["10.0.0.0/16"]
+}
+
  
 
