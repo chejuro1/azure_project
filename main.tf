@@ -1,7 +1,4 @@
 
-variable "client_secret" {
-}
-
 provider "azurerm" {
   # Whilst version is optional, we /strongly recommend/ using it to pin the ve$
   version = "=2.4.0"
