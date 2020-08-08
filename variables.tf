@@ -1,5 +1,5 @@
 variable "subscription_id" {
-    description = "subscription_id"
+    description = "ARM_SUBSCRIPTION_ID"
 }
 
 variable "client_secret" {
