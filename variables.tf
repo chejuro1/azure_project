@@ -24,9 +24,7 @@ variable "address_space" {
     default     = "eastus"
 }
 
-variable "address_prefixes" {   
-
-    type     =  list
+variable "address_prefix" {   
  description = "address_prefixes"
     default  = ["10.0.2.0/24"]
 }
