@@ -26,8 +26,8 @@ variable "address_space" {
 
 variable "address_prefixes" {   
 
-    type     = string
+    type     =  number
  description = "address_prefixes"
-    default     = ["10.0.2.0/24"]
+    default  = ["10.0.2.0/24"]
 }
 
