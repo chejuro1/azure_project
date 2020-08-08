@@ -14,6 +14,7 @@ variable "tenant_id" {
 }
 
 variable "address_space" {
+   
     description = "address_space"
     default     = ["10.0.0.0/16"]
 }
@@ -23,8 +24,10 @@ variable "address_space" {
     default     = "eastus"
 }
 
-variable "address_prefixes" {
-    description = "address_prefixes"
+variable "address_prefixes" {   
+
+    type     = list(string)
+ description = "address_prefixes"
     default     = ["10.0.2.0/24"]
 }
 
