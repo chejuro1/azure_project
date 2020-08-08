@@ -9,3 +9,12 @@ provider "azurerm" {
   tenant_id       = "{var.tenant_id}" 
 
 }
+
+resource "azurerm_resource_group" "myterraformgroup" {
+    name     = "myResourceGroup"
+    location = "eastus"
+
+    tags = {
+        environment = "Terraform Demo"
+    }
+}
