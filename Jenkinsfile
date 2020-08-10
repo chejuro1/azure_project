@@ -11,7 +11,7 @@ pipeline {
         stage('Ansible') {
             steps {
                 echo 'Hello, Ansible'
-                #sh 'java -version'
+               
             }
         }
     }
