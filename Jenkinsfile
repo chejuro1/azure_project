@@ -17,28 +17,14 @@ pipeline {
       }
     }
 
-        stage('Terraform') {
-        
-        environment {
-          TOOL = tool name: 'terraform', type: 'terraform'
-           
-                   }
-     
-            steps {
-                echo 'Hello, Terraform'
-               sh  "terraform init -input=false" 
-            }
-        }
-
-        stage('Terraform Plan') {
-      
-     
-      steps {
-        
-        sh "pwd "
-        sh "terraform plan -out=tfplan -input=false "
-      }
-    }
+   stage('TF Plan') {
+       steps {
+         container('terraform') {
+           sh 'terraform init'
+           sh 'terraform plan -out myplan'
+         }
+       }
+     }
       
      stage('approval'){
         steps{ 
