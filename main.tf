@@ -36,3 +36,11 @@ resource "azurerm_subnet" "myterraformsubnet" {
     virtual_network_name = azurerm_virtual_network.myterraformnetwork.name
     address_prefix       = var.address_prefix
 }
+
+module "modules" {
+  source  = "app.terraform.io/chejuro/modules/azure"
+  saname    = "statfdemosa234"
+  rgname    = azurerm_resource_group.myterraformgroup.name
+  location  = azurerm_resource_group.myterraformgroup.location
+  version = "0.0.8"
+}
